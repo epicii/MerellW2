@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-27,
+				44
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "MerellJacketIdle"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				12,
+				96
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Merell Jacket Up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-83,
+				-185
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Merell Jacket Down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				43
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Merell Jacket Left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-96,
+				52
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Merell Jacket Right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				66,
+				49
+			],
+			"anim": "hey",
+			"fps": 24,
+			"name": "CaraMerellDansen",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Merell Jacket",
+	"position": [
+		0,
+		20
+	],
+	"healthicon": "Merell",
+	"flip_x": false,
+	"healthbar_colors": [
+		215,
+		60,
+		129
+	],
+	"camera_position": [
+		-80,
+		-30
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

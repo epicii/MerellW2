@@ -1,0 +1,50 @@
+{
+	"storyName": "Circuit Breaker",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "racetrack",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"merell",
+		"merellbf",
+		"merellgf"
+	],
+	"songs": [
+		[
+			"merell",
+			"merell",
+			[
+				246,
+				33,
+				113
+			]
+		],
+		[
+			"pacer",
+			"merell",
+			[
+				246,
+				33,
+				113
+			]
+		],
+		[
+			"roadkill",
+			"merell",
+			[
+				246,
+				33,
+				113
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "Merell Week 1",
+	"hiddenUntilUnlocked": false
+}

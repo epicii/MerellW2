@@ -1,0 +1,59 @@
+{
+	"songs": [
+		[
+			"funky-feline",
+			"merell",
+			[
+				246,
+				93,
+				115
+			]
+		],
+		[
+			"octane",
+			"merell",
+			[
+				246,
+				93,
+				115
+			]
+		],
+		[
+			"hazard",
+			"merell",
+			[
+				246,
+				93,
+				115
+			]
+		],
+		[
+			"amalgamation",
+			"merell",
+			[
+				246,
+				93,
+				115
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "Your New Week",
+	"weekName": "bruh",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
