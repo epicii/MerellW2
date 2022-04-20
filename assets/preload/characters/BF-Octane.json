@@ -131,13 +131,93 @@
 			"fps": 24,
 			"name": "BF Dead Confirm",
 			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-256,
+				-11
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "BF idle dance",
+			"indices": [
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-261,
+				23
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "BF NOTE LEFT0",
+			"indices": [
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-321,
+				16
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "BF NOTE RIGHT0",
+			"indices": [
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-237,
+				-28
+			],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "BF NOTE DOWN0",
+			"indices": [
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-308,
+				69
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "BF NOTE UP0",
+			"indices": [
+				11,
+				12,
+				13,
+				14
+			]
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Octane BF",
 	"position": [
-		60,
-		350
+		50,
+		420
 	],
 	"healthicon": "bf",
 	"flip_x": true,

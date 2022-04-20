@@ -2,6 +2,7 @@
 	"directory": "",
 	"defaultZoom": 0.8,
 	"isPixelStage": false,
+	"isOctane": true,
 
 	"boyfriend": [770, 0],
 	"girlfriend": [400, 90],

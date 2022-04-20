@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-27,
 				44
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "MerellJacketIdle"
+			"fps": 24,
+			"name": "MerellJacketIdle",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				12,
 				96
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "Merell Jacket Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Merell Jacket Up"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-83,
 				-185
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "Merell Jacket Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Merell Jacket Down"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				6,
 				43
 			],
-			"anim": "singLEFT",
+			"loop": false,
 			"fps": 24,
-			"name": "Merell Jacket Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Merell Jacket Left"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				-96,
 				52
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Merell Jacket Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Merell Jacket Right"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				66,
 				49
 			],
-			"anim": "hey",
+			"loop": true,
 			"fps": 24,
-			"name": "CaraMerellDansen",
-			"indices": []
+			"anim": "hey",
+			"indices": [],
+			"name": "CaraMerellDansen"
 		}
 	],
 	"no_antialiasing": false,
@@ -73,7 +73,7 @@
 		0,
 		20
 	],
-	"healthicon": "Merell",
+	"healthicon": "merell",
 	"flip_x": false,
 	"healthbar_colors": [
 		215,

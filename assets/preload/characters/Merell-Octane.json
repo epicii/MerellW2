@@ -1,68 +1,158 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
 				-10,
 				0
 			],
-			"anim": "idle",
+			"loop": false,
 			"fps": 24,
-			"name": "MerellIdle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "MerellIdle"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				7,
+				6,
 				9
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "MerellLeft",
-			"indices": []
+			"indices": [],
+			"name": "MerellLeft"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-50,
-				-2
+				-49,
+				0
 			],
-			"anim": "singDOWN",
+			"loop": false,
 			"fps": 24,
-			"name": "MerellDown",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MerellDown"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				33,
-				18
+				17
 			],
-			"anim": "singUP",
+			"loop": false,
 			"fps": 24,
-			"name": "MerellUp",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "MerellUp"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				-63,
+				-60,
 				-5
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MerellRight"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-10,
+				0
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "MerellIdle",
+			"indices": [
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				6,
+				9
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "MerellLeft",
+			"indices": [
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-60,
+				-5
+			],
+			"anim": "singRIGHT-loop",
 			"fps": 24,
 			"name": "MerellRight",
-			"indices": []
+			"indices": [
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				33,
+				17
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "MerellUp",
+			"indices": [
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-49,
+				0
+			],
+			"anim": "singDOWN-loop",
+			"fps": 24,
+			"name": "MerellDown",
+			"indices": [
+				9,
+				10,
+				11,
+				12,
+				13,
+				14
+			]
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Merell Octane",
 	"position": [
 		-50,
-		180
+		190
 	],
-	"healthicon": "Octane",
+	"healthicon": "octane",
 	"flip_x": false,
 	"healthbar_colors": [
 		215,
