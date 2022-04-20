@@ -138,6 +138,21 @@ class GameOverSubstate extends MusicBeatSubstate
 	function coolStartDeath(?volume:Float = 1):Void
 	{
 		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
+		switch (PlayState.SONG.player2) {
+			case 'Merell Jacket':
+				var random = FlxG.random.int(1, 20);
+				var deathSound = FlxG.sound.play(Paths.sound("merell go " + random));
+			case 'Merell No Jacket':
+				var random = FlxG.random.int(1, 20);
+				var deathSound = FlxG.sound.play(Paths.sound("merell go " + random));
+			case 'clicktick':
+				var random2 = FlxG.random.int(1, 21);
+				var deathSound = FlxG.sound.play(Paths.sound("go" + random2));
+			case 'Amalgam CT':
+				var random3 = FlxG.random.int(1, 3);
+				var deathSound = FlxG.sound.play(Paths.sound("garbled" + random3));
+		    
+		}
 	}
 
 	function endBullshit():Void
