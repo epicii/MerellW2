@@ -9,7 +9,7 @@ function onStartCountdown()
 end
 
 function onCreate()
-        setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'merellGameover');
+        setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'merellGameOver');
         setPropertyFromClass('GameOverSubstate', 'endSoundName', 'merellContinue');
 
 end
