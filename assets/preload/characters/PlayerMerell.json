@@ -1,142 +1,142 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				-50,
+				190,
 				8
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "Left Note MISS",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Left Note MISS"
 		},
 		{
+			"loop": false,
 			"offsets": [
-				265,
+				395,
 				48
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "firstDeath",
-			"indices": [],
-			"name": "Merell Dies"
+			"fps": 24,
+			"name": "Merell Dies",
+			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
-				327,
+				337,
 				-531
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "deathLoop",
-			"fps": 24,
-			"name": "Merell Dead Loop",
-			"indices": []
+			"indices": [],
+			"name": "Merell Dead Loop"
 		},
 		{
+			"loop": false,
 			"offsets": [
-				327,
+				337,
 				-531
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "deathConfirm",
-			"indices": [],
-			"name": "Merell Dead Confirm"
-		},
-		{
-			"offsets": [
-				-58,
-				-244
-			],
-			"loop": false,
 			"fps": 24,
-			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "Down Note MISS"
-		},
-		{
-			"offsets": [
-				46,
-				61
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singUPmiss",
-			"indices": [],
-			"name": "Up Note MISS"
-		},
-		{
-			"offsets": [
-				28,
-				6
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "Right Note MISS"
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "Idle"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-36,
-				-240
-			],
-			"anim": "singDOWN",
-			"fps": 24,
-			"name": "Down Note0",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				-57,
-				10
-			],
-			"anim": "singLEFT",
-			"fps": 24,
-			"name": "Left Note0",
+			"name": "Merell Dead Confirm",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
 				52,
-				35
+				-244
 			],
-			"anim": "singUP",
+			"anim": "singDOWNmiss",
 			"fps": 24,
-			"name": "Up Note0",
+			"name": "Down Note MISS",
 			"indices": []
 		},
 		{
 			"loop": false,
 			"offsets": [
-				38,
+				-24,
+				61
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "Up Note MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-82,
+				6
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "Right Note MISS",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		},
+		{
+			"offsets": [
+				64,
+				-240
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down Note0"
+		},
+		{
+			"offsets": [
+				163,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left Note0"
+		},
+		{
+			"offsets": [
+				-20,
+				35
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up Note0"
+		},
+		{
+			"offsets": [
+				-82,
 				-2
 			],
-			"anim": "singRIGHT",
+			"loop": false,
 			"fps": 24,
-			"name": "Right Note0",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right Note0"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/PlayerMerell",
 	"position": [
-		110,
+		200,
 		-40
 	],
 	"healthicon": "playermerell",
@@ -147,8 +147,8 @@
 		109
 	],
 	"camera_position": [
-		130,
-		170
+		190,
+		160
 	],
 	"sing_duration": 4,
 	"scale": 1
