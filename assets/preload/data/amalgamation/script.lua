@@ -1,5 +1,5 @@
 function onCreate()
-        setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'clickTickGameOverTheme');
-        setPropertyFromClass('GameOverSubstate', 'endSoundName', 'CTcontinue');
+        setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'amalGO');
+        setPropertyFromClass('GameOverSubstate', 'endSoundName', 'amalContinue');
 
 end

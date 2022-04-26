@@ -1,11 +1,11 @@
 {
-	"idle_anim": "GF Dancing beat pink",
-	"image": "Menu_merellgf",
+	"confirm_anim": "M Dad Idle",
+	"idle_anim": "GF Dancing Beat pink",
 	"position": [
-		110,
-		140
+		140,
+		150
 	],
-	"flipX": false,
-	"scale": 0.55,
-	"confirm_anim": "M Dad Idle"
+	"scale": 0.5,
+	"image": "menu_merellgf",
+	"flipX": false
 }
