@@ -142,6 +142,9 @@ class GameOverSubstate extends MusicBeatSubstate
 			case 'Merell Jacket':
 				var random = FlxG.random.int(1, 20);
 				var deathSound = FlxG.sound.play(Paths.sound("merell go " + random));
+			case 'Merell-Octane':
+				var random = FlxG.random.int(1, 20);
+				var deathSound = FlxG.sound.play(Paths.sound("merell go " + random));
 			case 'Merell No Jacket':
 				var random = FlxG.random.int(1, 20);
 				var deathSound = FlxG.sound.play(Paths.sound("merell go " + random));

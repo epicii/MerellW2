@@ -7,3 +7,9 @@ function onStartCountdown()
     end
     return Function_Continue;
 end
+
+function onCreate()
+        setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'clickTickGameOverTheme');
+        setPropertyFromClass('GameOverSubstate', 'endSoundName', 'CTcontinue');
+
+end

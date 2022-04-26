@@ -2070,6 +2070,12 @@ class PlayState extends MusicBeatState
 			}
 			for (timer in modchartTimers) {
 				timer.active = false;
+			if(boyfriend.curCharacter=="Cyrix")
+				GameOverSubstate.characterName ="Cyrix";
+            if(boyfriend.curCharacter=="BF-Octane")
+			   GameOverSubstate.characterName ="BF-Octane";
+			if(boyfriend.curCharacter=="Player-Merell")
+				GameOverSubstate.characterName ="Player-Merell";
 			}
 		}
 
