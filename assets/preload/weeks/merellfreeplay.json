@@ -1,4 +1,20 @@
 {
+	"storyName": "Your New Week",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
 	"songs": [
 		[
 			"funky-feline",
@@ -20,40 +36,24 @@
 		],
 		[
 			"hazard",
-			"merell",
+			"ct",
 			[
 				246,
-				93,
-				115
+				133,
+				55
 			]
 		],
 		[
 			"amalgamation",
-			"merell",
+			"ACT",
 			[
-				246,
-				93,
-				115
+				40,
+				40,
+				40
 			]
 		]
 	],
-	"hiddenUntilUnlocked": false,
-	"hideFreeplay": false,
-	"weekBackground": "stage",
-	"difficulties": "",
-	"weekCharacters": [
-		"dad",
-		"bf",
-		"gf"
-	],
-	"storyName": "Your New Week",
-	"weekName": "bruh",
-	"freeplayColor": [
-		146,
-		113,
-		253
-	],
 	"hideStoryMode": true,
-	"weekBefore": "tutorial",
-	"startUnlocked": true
+	"weekName": "bruh",
+	"hiddenUntilUnlocked": false
 }
