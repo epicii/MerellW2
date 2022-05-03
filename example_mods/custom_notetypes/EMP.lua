@@ -11,6 +11,7 @@ function onCreatePost()
 			setPropertyFromGroup('unspawnNotes', i, 'texture', 'EMP_Assets')
 			setPropertyFromGroup('unspawnNotes', i, 'copyX', false)
 			setPropertyFromGroup('unspawnNotes', i, 'x', x - width / 5)
+			setPropertyFromGroup('unspawnNotes', i, 'ignoreNote', true)
 			setPropertyFromGroup('unspawnNotes', i, 'hitCausesMiss', true)
 			setPropertyFromGroup('unspawnNotes', i, 'noteSplashTexture', 'EMP_Notesplashes')
 		end
