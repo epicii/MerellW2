@@ -9,7 +9,7 @@ function onStartCountdown()
 end
 
 function onCreate()
-        setPropertyFromClass('GameOverSubstate', 'characterName', 'Player-Merell');
+        setPropertyFromClass('GameOverSubstate', 'characterName', 'PlayerMerell');
         setPropertyFromClass('GameOverSubstate', 'loopSoundName', 'clickTickGameOverTheme');
         setPropertyFromClass('GameOverSubstate', 'endSoundName', 'CTcontinue');
 
