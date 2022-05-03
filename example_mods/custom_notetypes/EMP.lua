@@ -7,7 +7,7 @@ function onCreatePost()
 		local nt = getPropertyFromGroup('unspawnNotes', i, 'noteType')
 		local width = getPropertyFromGroup('unspawnNotes', i, 'width')
 		local x = getPropertyFromGroup('unspawnNotes', i, 'x')
-		if nt == 'EMP Note' then
+		if nt == 'EMP' then
 			setPropertyFromGroup('unspawnNotes', i, 'texture', 'EMP_Assets')
 			setPropertyFromGroup('unspawnNotes', i, 'copyX', false)
 			setPropertyFromGroup('unspawnNotes', i, 'x', x - width / 5)
@@ -18,7 +18,7 @@ function onCreatePost()
 end
 
 function noteMiss(id, dir, NT, isSus)
-    if NT == 'EMP Note' then
+    if NT == 'EMP' then
 		_G['locked'..dir] = true
 		runTimer('unlock'..dir, getRandomFloat(2, 4), 1)
     end
