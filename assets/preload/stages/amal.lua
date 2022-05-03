@@ -35,6 +35,15 @@ setProperty('gfGroup.visible', false);
 	
 	makeLuaSprite('grass', 'week2BG/Grass', -425, -700)
 	setScrollFactor('grass', 0.8, 0.8)
+	
+	precacheImage('amalgam/Red_Pulse');
+	makeAnimatedLuaSprite('thered', 'amalgam/Red_Pulse', 0, 0);
+	addAnimationByPrefix('thered', 'idle', 'Red Pulsing', 24, false);
+	setGraphicSize('thered', 1280, 720);
+	objectPlayAnimation('thered', 'idle');
+	setProperty('thered.alpha', '0');
+	setObjectCamera('thered', 'other');
+
 
 	addLuaSprite('sky', false);
 	addLuaSprite('bleachers_back', false);
@@ -43,6 +52,7 @@ setProperty('gfGroup.visible', false);
 	addLuaSprite('road', false);
 	addLuaSprite('grass', false);
 	addLuaSprite('nightlight', false);
+	addLuaSprite('thered', true);
 	
 end
 	
