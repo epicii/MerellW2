@@ -2519,10 +2519,6 @@ class PlayState extends MusicBeatState
 
 				if(daNote.copyAlpha)
 					daNote.alpha = strumAlpha;
-
-				if (locked0 && daNote.noteData == 0 || locked1 && daNote.noteData == 1 || locked2 && daNote.noteData == 2 || locked3 && daNote.noteData == 3) {
-					daNote.canBeHit = false;
-				}
 				
 				if(daNote.copyX)
 					daNote.x = strumX + Math.cos(angleDir) * daNote.distance;
@@ -3604,10 +3600,8 @@ class PlayState extends MusicBeatState
 					}
 				}
 				else if (canMiss) {
-					if ((key == 0 && !locked0) || (key == 1 && !locked1) || (key == 2 && !locked2) || (key == 3 && !locked3)) {
-						noteMissPress(key);
-						callOnLuas('noteMissPress', [key]);
-					}
+					noteMissPress(key);
+					callOnLuas('noteMissPress', [key]);
 				}
 
 				// I dunno what you need this for but here you go
@@ -3622,7 +3616,7 @@ class PlayState extends MusicBeatState
 			}
 
 			var spr:StrumNote = playerStrums.members[key];
-			if(spr != null && spr.animation.curAnim.name != 'confirm' && (key == 0 && !locked0 || key == 1 && !locked1 || key == 2 && !locked2 || key == 3 && !locked3))
+			if(spr != null && spr.animation.curAnim.name != 'confirm')
 			{
 				spr.playAnim('pressed');
 				spr.resetAnim = 0;
@@ -3691,20 +3685,18 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-	
 		// FlxG.watch.addQuick('asdfa', upP);
 		if (!boyfriend.stunned && generatedMusic)
+		{
+			// rewritten inputs???
+			notes.forEachAlive(function(daNote:Note)
 			{
-				// rewritten inputs???
-				notes.forEachAlive(function(daNote:Note)
-				{
-					// hold note functions
-					if (daNote.isSustainNote && controlHoldArray[daNote.noteData] && daNote.canBeHit 
-					&& daNote.mustPress && !daNote.tooLate && !daNote.wasGoodHit) {
-						if (controlHoldArray[daNote.noteData] == left && !locked0 || controlHoldArray[daNote.noteData] == down && !locked1 || controlHoldArray[daNote.noteData] == up && !locked2 || controlHoldArray[daNote.noteData] == right && !locked3)
-						goodNoteHit(daNote);
-					}
-				});
+				// hold note functions
+				if (daNote.isSustainNote && controlHoldArray[daNote.noteData] && daNote.canBeHit 
+				&& daNote.mustPress && !daNote.tooLate && !daNote.wasGoodHit) {
+					goodNoteHit(daNote);
+				}
+			});
 
 			if (controlHoldArray.contains(true) && !endingSong) {
 				#if ACHIEVEMENTS_ALLOWED
@@ -3878,10 +3870,6 @@ class PlayState extends MusicBeatState
 		}
 	}
 
-	public var locked0:Bool = false;
-	public var locked1:Bool = false;
-	public var locked2:Bool = false;
-	public var locked3:Bool = false;
 	function goodNoteHit(note:Note):Void
 	{
 		if (!note.wasGoodHit)
