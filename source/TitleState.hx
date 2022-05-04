@@ -481,6 +481,8 @@ class TitleState extends MusicBeatState
 				// credTextShit.visible = true;
 				case 3:
 					addMoreText('d0munit', 15);
+					addMoreText('ryissofly', 15);
+					addMoreText('grim', 15);
 
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
@@ -514,17 +516,15 @@ class TitleState extends MusicBeatState
 				// credTextShit.text += '\nlmao';
 				case 12:
 					deleteCoolText();
-				// credTextShit.visible = false;
-				// credTextShit.text = "Friday";
-				// credTextShit.screenCenter();
-				case 13:
 					addMoreText('Friday');
+				case 13:
+					addMoreText('Night');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Night');
+					addMoreText('Funkin');
 				// credTextShit.text += '\nNight';
 				case 15:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('Circuit Breaker'); // credTextShit.text += '\nFunkin';
 
 				case 16:
 					skipIntro();
