@@ -1,4 +1,3 @@
-
 local xx = 600;
 local yy = 400;
 local xx2 = 678;
@@ -127,6 +126,12 @@ end
 		if value1 == '1' then
            yy2 = 400;
 		end
+		if value1 == '2' then
+		xx = 400;
+	end
+	if value1 == '3' then
+	xx = 600;
+	end
 	end
 	end
 	end
