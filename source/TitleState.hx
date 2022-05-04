@@ -459,6 +459,8 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
+
+
 		if(logoBl != null) 
 			logoBl.animation.play('bump', true);
 
@@ -475,20 +477,11 @@ class TitleState extends MusicBeatState
 			switch (sickBeats)
 			{
 				case 1:
-					#if PSYCH_WATERMARKS
-					createCoolText(['Psych Engine by'], 15);
-					#else
-					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
-					#end
+					createCoolText(['a cool mod made by'], 15);
 				// credTextShit.visible = true;
 				case 3:
-					#if PSYCH_WATERMARKS
-					addMoreText('Shadow Mario', 15);
-					addMoreText('RiverOaken', 15);
-					addMoreText('shubs', 15);
-					#else
-					addMoreText('present');
-					#end
+					addMoreText('d0munit', 15);
+
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
 				case 4:

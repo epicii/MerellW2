@@ -81,26 +81,17 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-			['Psych Engine Team'],
-			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],
-			['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',						'https://twitter.com/RiverOaken',		'C30085'],
-			['shubs',				'shubs',			'Additional Programmer of Psych Engine',					'https://twitter.com/yoshubs',			'279ADC'],
-			[''],
-			['Former Engine Members'],
-			['bb-panzu',			'bb-panzu',			'Ex-Programmer of Psych Engine',							'https://twitter.com/bbsub3',			'389A58'],
-			[''],
-			['Engine Contributors'],
-			['iFlicky',				'iflicky',			'Composer of Psync and Tea Time\nMade the Dialogue Sounds',	'https://twitter.com/flicky_i',			'AA32FE'],
-			['SqirraRNG',			'gedehari',			'Chart Editor\'s Sound Waveform base',						'https://twitter.com/gedehari',			'FF9300'],
-			['PolybiusProxy',		'polybiusproxy',	'.MP4 Video Loader Extension',								'https://twitter.com/polybiusproxy',	'FFEAA6'],
-			['Keoiki',				'keoiki',			'Note Splash Animations',									'https://twitter.com/Keoiki_',			'FFFFFF'],
-			['Smokey',				'smokey',			'Spritemap Texture Support',								'https://twitter.com/Smokey_5_',		'4D5DBD'],
-			[''],
-			["Funkin' Crew"],
-			['ninjamuffin99',		'ninjamuffin99',	"Programmer of Friday Night Funkin'",						'https://twitter.com/ninja_muffin99',	'F73838'],
-			['PhantomArcade',		'phantomarcade',	"Animator of Friday Night Funkin'",							'https://twitter.com/PhantomArcade3K',	'FFBB1B'],
-			['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",							'https://twitter.com/evilsk8r',			'53E52C'],
-			['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",							'https://twitter.com/kawaisprite',		'6475F3']
+			['Merell Team'],
+			['d0munit', 'dom icon', 'Director, Animator, Sprite Artist, Charter, Click-Tick voice actor', 'https://twitter.com/d0munit', '00E9C1'],
+		    ['Ryissofly', 'Ryisso icon', 'Main Composer', 'https://twitter.com/Ryissofly', 'D864FF'],
+			['Grim', 'Ralsei icon', 'V2 Lead Programmer', 'https://www.youtube.com/channel/UCJQ1TgCbopgMSoqnWVifdzg', '6D5E78'],
+			['Kevin', 'kevin_icon', 'Coded EMP Notes', 'https://youtu.be/jKcRDgobqzA', 'EFB0A1'],
+			['Ico', 'Ico icon', 'Merell Voice Actor', 'https://ico.newgrounds.com/', 'D75FC7'],
+			['ZipCorner', 'zip icon', 'Composer and Background Artist for Octane', 'https://twitter.com/ZipCorner', '37D7A0'],
+			['Matt Money', 'matt icon', 'Composer for Funky Feline and 404d, owner of Cyrix', 'https://twitter.com/matt_currency', '86F078'],
+			['Special Thanks'],
+			['HyperSAM', 'Sam icon', 'Original coder for V1.0', 'https://twitter.com/HyperNormalSAM', '375FF0'],
+			['Nukiruki', 'nuki icon', 'Playtesting', 'https://twitter.com/NUKIRUKI', 'D7FF64']
 		];
 		
 		for(i in pisspoop){
