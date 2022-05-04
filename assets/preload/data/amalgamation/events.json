@@ -1,6 +1,6 @@
 {
 	"song": {
-		"speed": 2,
+		"speed": 2.6,
 		"stage": "amal",
 		"player1": "bf",
 		"player2": "Amalgam CT",
@@ -20,19 +20,14 @@
 				16935.4838709677,
 				[
 					[
+						"Health Drain",
+						"20",
+						"0.01"
+					],
+					[
 						"Play Animation",
 						"hey",
-						"Amalgam CT"
-					],
-					[
-						"Set Cam Zoom",
-						"1.25",
-						"0.1"
-					],
-					[
-						"Health Drain",
-						"0.75",
-						"0.01"
+						"dad"
 					]
 				]
 			],
@@ -40,13 +35,8 @@
 				17056.4516129032,
 				[
 					[
-						"Set Cam Zoom",
-						"0.8",
-						"0.1"
-					],
-					[
 						"Health Drain",
-						"0.0",
+						"0",
 						"0.01"
 					]
 				]
@@ -61,7 +51,7 @@
 					],
 					[
 						"Health Drain",
-						"0.75",
+						"20",
 						"0.01"
 					]
 				]

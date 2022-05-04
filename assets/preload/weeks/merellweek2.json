@@ -3,14 +3,18 @@
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "nighttrack",
-	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"hideStoryMode": false,
+	"weekCharacters": [
+		"ct",
+		"bf",
+		"gf"
+	],
 	"songs": [
 		[
 			"Spiraling",
@@ -40,11 +44,7 @@
 			]
 		]
 	],
-	"weekCharacters": [
-		"ct",
-		"bf",
-		"gf"
-	],
-	"hiddenUntilUnlocked": false,
-	"weekName": "Merell Week 2"
+	"hideStoryMode": false,
+	"weekName": "Merell Week 2",
+	"hiddenUntilUnlocked": false
 }

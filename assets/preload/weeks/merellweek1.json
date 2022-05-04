@@ -3,18 +3,14 @@
 	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "racetrack",
+	"weekBefore": "tutorial",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"weekBefore": "tutorial",
 	"startUnlocked": true,
-	"weekCharacters": [
-		"merell",
-		"merellbf",
-		"merellgf"
-	],
+	"hideStoryMode": false,
 	"songs": [
 		[
 			"merell",
@@ -44,7 +40,11 @@
 			]
 		]
 	],
-	"hideStoryMode": false,
-	"weekName": "Merell Week 1",
-	"hiddenUntilUnlocked": false
+	"weekCharacters": [
+		"merell",
+		"merellbf",
+		"merellgf"
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Circuit Breaker"
 }
