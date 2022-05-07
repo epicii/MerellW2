@@ -85,7 +85,7 @@ class CreditsState extends MusicBeatState
 			['d0munit', 'dom icon', 'Director, Animator, Sprite Artist, Charter, Click-Tick voice actor', 'https://twitter.com/d0munit', '00E9C1'],
 		    ['Ryissofly', 'Ryisso icon', 'Main Composer', 'https://twitter.com/Ryissofly', 'D864FF'],
 			['Grim', 'Ralsei icon', 'V2 Lead Programmer', 'https://www.youtube.com/channel/UCJQ1TgCbopgMSoqnWVifdzg', '6D5E78'],
-			['Kevin', 'kevin_icon', 'Coded EMP Notes', 'https://kevinkuntz.newgrounds.com/', 'EFB0A1'],
+			['Kevin', 'kevin_icon', 'V2 Secondary Programmer', 'https://kevinkuntz.newgrounds.com/', 'EFB0A1'],
 			['Ico', 'Ico icon', 'Merell Voice Actor', 'https://ico.newgrounds.com/', 'D75FC7'],
 			['ZipCorner', 'zip icon', 'Composer and Background Artist for Octane', 'https://twitter.com/ZipCorner', '37D7A0'],
 			['Matt Money', 'matt icon', 'Composer for Funky Feline and 404d, owner of Cyrix', 'https://twitter.com/matt_currency', '86F078'],
