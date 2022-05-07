@@ -70,7 +70,7 @@
 	"no_antialiasing": false,
 	"image": "characters/ClickTick",
 	"position": [
-		40,
+		-140,
 		420
 	],
 	"healthicon": "ct",
@@ -82,7 +82,7 @@
 	],
 	"camera_position": [
 		100,
-		-120
+		-140
 	],
 	"sing_duration": 4,
 	"scale": 1

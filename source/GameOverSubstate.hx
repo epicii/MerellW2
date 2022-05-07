@@ -139,13 +139,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	{
 		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
 		switch (PlayState.SONG.player2) {
-			case 'Merell Jacket':
-				var random = FlxG.random.int(1, 20);
-				var deathSound = FlxG.sound.play(Paths.sound("merell go " + random));
-			case 'Merell-Octane':
-				var random = FlxG.random.int(1, 20);
-				var deathSound = FlxG.sound.play(Paths.sound("merell go " + random));
-			case 'Merell No Jacket':
+			case 'Merell Jacket' | 'Merell-Octane' | 'Merell No Jacket':
 				var random = FlxG.random.int(1, 20);
 				var deathSound = FlxG.sound.play(Paths.sound("merell go " + random));
 			case 'clicktick':

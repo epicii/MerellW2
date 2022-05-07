@@ -1,10 +1,14 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				2,
 				-9
 			],
+			"anim": "danceLeft",
+			"fps": 24,
+			"name": "GF Dancing Beat",
 			"indices": [
 				30,
 				0,
@@ -22,17 +26,17 @@
 				12,
 				13,
 				14
-			],
-			"fps": 24,
-			"anim": "danceLeft",
-			"loop": false,
-			"name": "GF Dancing Beat"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				2,
 				-9
 			],
+			"anim": "danceRight",
+			"fps": 24,
+			"name": "GF Dancing Beat",
 			"indices": [
 				15,
 				16,
@@ -49,28 +53,24 @@
 				27,
 				28,
 				29
-			],
-			"fps": 24,
-			"anim": "danceRight",
-			"loop": false,
-			"name": "GF Dancing Beat"
+			]
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-21
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "sad",
-			"loop": false,
-			"name": "gf sad"
+			"fps": 24,
+			"name": "gf sad",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Haywire GF BF",
 	"position": [
-		-60,
+		-100,
 		-30
 	],
 	"healthicon": "gf",

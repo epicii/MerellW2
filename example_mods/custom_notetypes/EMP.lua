@@ -16,12 +16,21 @@ function onCreatePost()
 			setPropertyFromGroup('unspawnNotes', i, 'noteSplashTexture', 'EMP_Notesplashes')
 		end
 	end
+	for i = 0, getProperty('playerStrums.length')-1 do
+		makeLuaSprite('disabled'..i, 'Disabled', getPropertyFromGroup('playerStrums', i, 'x'), getPropertyFromGroup('playerStrums', i, 'y'))
+		scaleObject('disabled'..i, getPropertyFromGroup('playerStrums', i, 'scale.x'), getPropertyFromGroup('playerStrums', i, 'scale.y'))
+		setObjectCamera('disabled'..i, 'hud')
+		addLuaSprite('disabled'..i, true)
+		setProperty('disabled'..i..'.visible', false)
+	end
 end
 
 function noteMiss(id, dir, NT, isSus)
     if NT == 'EMP' then
 		_G['locked'..dir] = true
+		setProperty('disabled'..dir..'.visible', true)
 		runTimer('unlock'..dir, getRandomFloat(2, 4), 1)
+		playSound('EMP', 0.6)
     end
 end
 
@@ -43,6 +52,7 @@ function onTimerCompleted(t)
 	for i = 0, 3 do
 		if t == 'unlock'..i then
 			_G['locked'..i] = false
+			setProperty('disabled'..i..'.visible', false)
 		end
 	end
 end
