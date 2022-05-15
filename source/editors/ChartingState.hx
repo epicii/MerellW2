@@ -61,6 +61,7 @@ class ChartingState extends MusicBeatState
 		'Alt Animation',
 		'Hey!',
 		'Hurt Note',
+		'EMP',
 		'GF Sing',
 		'No Animation'
 	];
@@ -201,10 +202,10 @@ class ChartingState extends MusicBeatState
 		else
 		{
 			_song = {
-				song: 'Test',
+				song: 'Merell',
 				notes: [],
 				events: [],
-				bpm: 150.0,
+				bpm: 156.0,
 				needsVoices: true,
 				arrowSkin: '',
 				splashSkin: 'noteSplashes',//idk it would crash if i didn't
@@ -2428,8 +2429,8 @@ class ChartingState extends MusicBeatState
 			note.noteData = -1;
 			daNoteInfo = -1;
 		}
-
-		note.setGraphicSize(GRID_SIZE, GRID_SIZE);
+		
+		if (note.noteType != 'EMP') note.setGraphicSize(GRID_SIZE, GRID_SIZE); else note.setGraphicSize(GRID_SIZE + 5, GRID_SIZE + 5);
 		note.updateHitbox();
 		note.x = Math.floor(daNoteInfo * GRID_SIZE) + GRID_SIZE;
 		if(isNextSection && _song.notes[curSection].mustHitSection != _song.notes[curSection+1].mustHitSection) {

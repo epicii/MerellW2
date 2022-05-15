@@ -2543,6 +2543,9 @@ class PlayState extends MusicBeatState
 						daNote.y += 27.5 * ((SONG.bpm / 100) - 1) * (songSpeed - 1);
 					}
 				}
+				
+				if (locked[daNote.noteData])
+					daNote.canBeHit = false;
 
 				if (!daNote.mustPress && daNote.wasGoodHit && !daNote.hitByOpponent && !daNote.ignoreNote)
 				{
@@ -3295,6 +3298,7 @@ class PlayState extends MusicBeatState
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				changedDifficulty = false;
 			}
+			//if (misses <= 40) 
 			transitioning = true;
 		}
 	}
@@ -3600,8 +3604,10 @@ class PlayState extends MusicBeatState
 					}
 				}
 				else if (canMiss) {
-					noteMissPress(key);
-					callOnLuas('noteMissPress', [key]);
+					if (!locked[key]) {
+						noteMissPress(key);
+						callOnLuas('noteMissPress', [key]);
+					}
 				}
 
 				// I dunno what you need this for but here you go
@@ -3616,7 +3622,7 @@ class PlayState extends MusicBeatState
 			}
 
 			var spr:StrumNote = playerStrums.members[key];
-			if(spr != null && spr.animation.curAnim.name != 'confirm')
+			if((!locked[key]) && spr != null && spr.animation.curAnim.name != 'confirm')
 			{
 				spr.playAnim('pressed');
 				spr.resetAnim = 0;
@@ -3869,7 +3875,8 @@ class PlayState extends MusicBeatState
 			note.destroy();
 		}
 	}
-
+	
+	private var locked:Array<Bool> = [false, false, false, false];
 	function goodNoteHit(note:Note):Void
 	{
 		if (!note.wasGoodHit)
@@ -3892,6 +3899,22 @@ class PlayState extends MusicBeatState
 						if(boyfriend.animation.getByName('hurt') != null) {
 							boyfriend.playAnim('hurt', true);
 							boyfriend.specialAnim = true;
+						}
+					case 'EMP': //EMP Note
+						locked[note.noteData] = true;
+						FlxG.sound.play(Paths.sound('EMP'), 0.6);
+						var strum:StrumNote = playerStrums.members[note.noteData];
+						if(strum != null) {
+							var disabled:FlxSprite = new FlxSprite(strum.x, strum.y).loadGraphic(Paths.image('Disabled'));
+							add(disabled);
+							disabled.scrollFactor.set();
+							disabled.setGraphicSize(Std.int(strum.width));
+							disabled.offset.set(strum.offset.x, strum.offset.y);
+							disabled.cameras = [camHUD];
+							new FlxTimer().start(FlxG.random.float(2, 4), function(tmr:FlxTimer) {
+								disabled.destroy();
+								locked[note.noteData] = false;
+							});
 						}
 				}
 				

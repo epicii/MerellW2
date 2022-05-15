@@ -111,6 +111,14 @@ class Note extends FlxSprite
 						missHealth = 0.3;
 					}
 					hitCausesMiss = true;
+				case 'EMP':
+					ignoreNote = mustPress;
+					reloadNote('EMP');
+					noteSplashTexture = 'EMP_Notesplashes';
+					copyX = false;
+					x -= width / 5;
+					x += width / 20;
+					hitCausesMiss = true;
 				case 'No Animation':
 					noAnimation = true;
 				case 'GF Sing':
