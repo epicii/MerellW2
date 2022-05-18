@@ -11,22 +11,20 @@ using StringTools;
 
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Achievement save tag, Hidden achievement
-		["Freaky on a Friday Night",	"Play on a Friday... Night.",						'friday_night_play',	 true],
-		["She Calls Me Daddy Too",		"Beat Week 1 on Hard with no Misses.",				'week1_nomiss',			false],
-		["No More Tricks",				"Beat Week 2 on Hard with no Misses.",				'week2_nomiss',			false],
-		["Call Me The Hitman",			"Beat Week 3 on Hard with no Misses.",				'week3_nomiss',			false],
-		["Lady Killer",					"Beat Week 4 on Hard with no Misses.",				'week4_nomiss',			false],
-		["Missless Christmas",			"Beat Week 5 on Hard with no Misses.",				'week5_nomiss',			false],
-		["Highscore!!",					"Beat Week 6 on Hard with no Misses.",				'week6_nomiss',			false],
-		["You'll Pay For That...",		"Beat Week 7 on Hard with no Misses.",				'week7_nomiss',			 true],
-		["What a Funkin' Disaster!",	"Complete a Song with a rating lower than 20%.",	'ur_bad',				false],
-		["Perfectionist",				"Complete a Song with a rating of 100%.",			'ur_good',				false],
-		["Roadkill Enthusiast",			"Watch the Henchmen die over 100 times.",			'roadkill_enthusiast',	false],
-		["Oversinging Much...?",		"Hold down a note for 10 seconds.",					'oversinging',			false],
-		["Hyperactive",					"Finish a Song without going Idle.",				'hype',					false],
-		["Just the Two of Us",			"Finish a Song pressing only two keys.",			'two_keys',				false],
-		["Toaster Gamer",				"Have you tried to run the game on a toaster?",		'toastie',				false],
-		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",	'debugger',				 true]
+		["Formula",		"Beat Merrell on Hard with no Misses.",				'merell_nomiss',			 false],
+		["Aerodynamic",		"Beat Pacer on Hard with no Misses.",				'pacer_nomiss',			 false],
+		["Street Sweep",		"Beat Roadkill on Hard with no Misses.",				'roadkill_nomiss',			 false],
+		["Circuit Breaker",		"Beat Merrell's Week on Hard with no Misses.",				'weekM_nomiss',			 false],
+		["A New Challenger",		"Beat Spiraling on Hard with no Misses.",				'spiral_nomiss',			 false],
+		["Razor Sharp",		"Beat Wreckage on Hard with no Misses.",				'wreck_nomiss',			 false],
+		["Robot Stop",		"Beat Haywire on Hard with no Misses.",				'haywire_nomiss',			 false],
+		["Trashed and Scattered",		"Beat Clicktick's Week on Hard with no Misses.",				'weekCT_nomiss',			 false],
+		["2000s Cat Video",		"Beat Funky Feline on Hard with no Misses.",				'FF_nomiss',			 false],
+		["Warning",		"Beat Hazard on Hard with no Misses.",				'hazard_nomiss',			 false],
+		["GOOD ENDING",		"Beat Haywire while hitting under 15% of EMP notes on Hard.",				'GOODENDING',			 false],
+		["BAD ENDING",		"Beat Haywire while hitting over 50% of EMP notes on Hard.",				'BADENDING',			 false],
+		["Victory Lap",		"Beat Octane On Hard with no Misses.",				'octane_nomiss',			 false],
+		["Fixing your mistake",		"Beat Amalgamation On Hard with no Misses.",				'amal_nomiss',			 false],
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 

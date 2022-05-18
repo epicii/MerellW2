@@ -223,6 +223,7 @@ class PlayState extends MusicBeatState
 	public var songScore:Int = 0;
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
+	public var songShocks:Int = 0;
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
@@ -288,12 +289,6 @@ class PlayState extends MusicBeatState
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_up')),
 			ClientPrefs.copyKey(ClientPrefs.keyBinds.get('note_right'))
 		];
-
-		// For the "Just the Two of Us" achievement
-		for (i in 0...keysArray.length)
-		{
-			keysPressed.push(false);
-		}
 
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
@@ -2304,9 +2299,6 @@ class PlayState extends MusicBeatState
 			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 			if(!startingSong && !endingSong && boyfriend.animation.curAnim.name.startsWith('idle')) {
 				boyfriendIdleTime += elapsed;
-				if(boyfriendIdleTime >= 0.15) { // Kind of a mercy thing for making the achievement easier to get as it's apparently frustrating to some playerss
-					boyfriendIdled = true;
-				}
 			} else {
 				boyfriendIdleTime = 0;
 			}
@@ -3184,9 +3176,10 @@ class PlayState extends MusicBeatState
 		if(achievementObj != null) {
 			return;
 		} else {
-			var achieve:String = checkForAchievement(['week1_nomiss', 'week2_nomiss', 'week3_nomiss', 'week4_nomiss',
-				'week5_nomiss', 'week6_nomiss', 'week7_nomiss', 'ur_bad',
-				'ur_good', 'hype', 'two_keys', 'toastie', 'debugger']);
+			var achieve:String = checkForAchievement(['merell_nomiss', 'pacer_nomiss', 'roadkill_nomiss', 'weekM_nomiss',
+				'spiral_nomiss', 'wreck_nomiss', 'haywire_nomiss', 'weekCT_nomiss',
+				'FF_nomiss', 'hazard_nomiss', 'GOODENDING', 'BADENDING', 'octane_nomiss',
+				'amal_nomiss']);
 
 			if(achieve != null) {
 				startAchievement(achieve);
@@ -3610,12 +3603,6 @@ class PlayState extends MusicBeatState
 					}
 				}
 
-				// I dunno what you need this for but here you go
-				//									- Shubs
-
-				// Shubs, this is for the "Just the Two of Us" achievement lol
-				//									- Shadow Mario
-				keysPressed[key] = true;
 
 				//more accurate hit time for the ratings? part 2 (Now that the calculations are done, go back to the time it was before for not causing a note stutter)
 				Conductor.songPosition = lastTime;
@@ -3704,15 +3691,7 @@ class PlayState extends MusicBeatState
 				}
 			});
 
-			if (controlHoldArray.contains(true) && !endingSong) {
-				#if ACHIEVEMENTS_ALLOWED
-				var achieve:String = checkForAchievement(['oversinging']);
-				if (achieve != null) {
-					startAchievement(achieve);
-				}
-				#end
-			}
-			else if (boyfriend.holdTimer > Conductor.stepCrochet * 0.001 * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
+			if (boyfriend.holdTimer > Conductor.stepCrochet * 0.001 * boyfriend.singDuration && boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))
 			{
 				boyfriend.dance();
 				//boyfriend.animation.curAnim.finish();
@@ -4162,18 +4141,6 @@ class PlayState extends MusicBeatState
 				limoCorpse.visible = false;
 				limoCorpseTwo.visible = false;
 				limoKillingState = 1;
-
-				#if ACHIEVEMENTS_ALLOWED
-				Achievements.henchmenDeath++;
-				FlxG.save.data.henchmenDeath = Achievements.henchmenDeath;
-				var achieve:String = checkForAchievement(['roadkill_enthusiast']);
-				if (achieve != null) {
-					startAchievement(achieve);
-				} else {
-					FlxG.save.flush();
-				}
-				FlxG.log.add('Deaths: ' + Achievements.henchmenDeath);
-				#end
 			}
 		}
 	}
@@ -4472,65 +4439,64 @@ class PlayState extends MusicBeatState
 				var unlock:Bool = false;
 				switch(achievementName)
 				{
-					case 'week1_nomiss' | 'week2_nomiss' | 'week3_nomiss' | 'week4_nomiss' | 'week5_nomiss' | 'week6_nomiss' | 'week7_nomiss':
+					case 'weekM_nomiss' | 'weekCT_nomiss':
 						if(isStoryMode && campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 						{
 							var weekName:String = WeekData.getWeekFileName();
 							switch(weekName) //I know this is a lot of duplicated code, but it's easier readable and you can add weeks with different names than the achievement tag
 							{
-								case 'week1':
-									if(achievementName == 'week1_nomiss') unlock = true;
-								case 'week2':
-									if(achievementName == 'week2_nomiss') unlock = true;
-								case 'week3':
-									if(achievementName == 'week3_nomiss') unlock = true;
-								case 'week4':
-									if(achievementName == 'week4_nomiss') unlock = true;
-								case 'week5':
-									if(achievementName == 'week5_nomiss') unlock = true;
-								case 'week6':
-									if(achievementName == 'week6_nomiss') unlock = true;
-								case 'week7':
-									if(achievementName == 'week7_nomiss') unlock = true;
+								case 'weekM':
+									if(achievementName == 'weekM_nomiss') unlock = true;
+								case 'weekCT':
+									if(achievementName == 'weekCT_nomiss') unlock = true;
 							}
 						}
-					case 'ur_bad':
-						if(ratingPercent < 0.2 && !practiceMode) {
+					case 'merell_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'merell' && songMisses < 1 && !usedPractice) {
 							unlock = true;
 						}
-					case 'ur_good':
-						if(ratingPercent >= 1 && !usedPractice) {
+					case 'pacer_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'pacer' && songMisses < 1 && !usedPractice) {
 							unlock = true;
 						}
-					case 'roadkill_enthusiast':
-						if(Achievements.henchmenDeath >= 100) {
+					case 'roadkill_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'roadkill' && songMisses < 1 && !usedPractice) {
 							unlock = true;
 						}
-					case 'oversinging':
-						if(boyfriend.holdTimer >= 10 && !usedPractice) {
+					case 'spiral_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'spiraling' && songMisses < 1 && !usedPractice) {
 							unlock = true;
 						}
-					case 'hype':
-						if(!boyfriendIdled && !usedPractice) {
+					case 'wreck_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'wreckage' && songMisses < 1 && !usedPractice) {
 							unlock = true;
 						}
-					case 'two_keys':
-						if(!usedPractice) {
-							var howManyPresses:Int = 0;
-							for (j in 0...keysPressed.length) {
-								if(keysPressed[j]) howManyPresses++;
-							}
-
-							if(howManyPresses <= 2) {
-								unlock = true;
-							}
-						}
-					case 'toastie':
-						if(/*ClientPrefs.framerate <= 60 &&*/ ClientPrefs.lowQuality && !ClientPrefs.globalAntialiasing && !ClientPrefs.imagesPersist) {
+					case 'haywire_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'haywire' && songMisses < 1 && !usedPractice) {
 							unlock = true;
 						}
-					case 'debugger':
-						if(Paths.formatToSongPath(SONG.song) == 'test' && !usedPractice) {
+					case 'FF_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'funky-feline' && songMisses < 1 && !usedPractice) {
+							unlock = true;
+						}
+					case 'hazard_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'hazard' && songMisses < 1 && !usedPractice) {
+							unlock = true;
+						}
+					case 'octane_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'octane' && songMisses < 1 && !usedPractice) {
+							unlock = true;
+						}
+					case 'amal_nomiss':
+						if(Paths.formatToSongPath(SONG.song) == 'amalgamation' && songMisses < 1 && !usedPractice) {
+							unlock = true;
+						}
+					case 'GOODENDING':
+						if(Paths.formatToSongPath(SONG.song) == 'haywire' && songShocks < 40 && !usedPractice) {
+							unlock = true;
+						}
+					case 'BADENDING':
+						if(Paths.formatToSongPath(SONG.song) == 'haywire' && songShocks > 40 && !usedPractice) {
 							unlock = true;
 						}
 				}
