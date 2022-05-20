@@ -30,6 +30,7 @@ import flixel.system.FlxSound;
 import flixel.system.ui.FlxSoundTray;
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
+import flixel.util.FlxGradient;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
@@ -247,6 +248,7 @@ class TitleState extends MusicBeatState
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24, false);
 		logoBl.animation.play('bump');
 		logoBl.updateHitbox();
+		logoBl.y += 100;
 		// logoBl.screenCenter();
 		// logoBl.color = FlxColor.BLACK;
 
@@ -301,7 +303,7 @@ class TitleState extends MusicBeatState
 		add(credGroup);
 		textGroup = new FlxGroup();
 
-		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
+		var blackScreen:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('gradient'));
 		credGroup.add(blackScreen);
 
 		credTextShit = new Alphabet(0, 0, "", true);
@@ -310,14 +312,6 @@ class TitleState extends MusicBeatState
 		// credTextShit.alignment = CENTER;
 
 		credTextShit.visible = false;
-
-		ngSpr = new FlxSprite(0, FlxG.height * 0.52).loadGraphic(Paths.image('newgrounds_logo'));
-		add(ngSpr);
-		ngSpr.visible = false;
-		ngSpr.setGraphicSize(Std.int(ngSpr.width * 0.8));
-		ngSpr.updateHitbox();
-		ngSpr.screenCenter(X);
-		ngSpr.antialiasing = ClientPrefs.globalAntialiasing;
 
 		FlxTween.tween(credTextShit, {y: credTextShit.y + 20}, 2.9, {ease: FlxEase.quadInOut, type: PINGPONG});
 
@@ -458,6 +452,10 @@ class TitleState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
+		FlxG.camera.zoom = 1.05;
+		titleText.scale.x = titleText.scale.y = 1.06;
+		FlxTween.tween(FlxG.camera, {zoom:1}, 0.4);
+		FlxTween.tween(titleText.scale, {x:1,y:1}, 0.4);
 
 
 
@@ -499,11 +497,9 @@ class TitleState extends MusicBeatState
 					#end
 				case 7:
 					addMoreText('newgrounds', -40);
-					ngSpr.visible = true;
 				// credTextShit.text += '\nNewgrounds';
 				case 8:
 					deleteCoolText();
-					ngSpr.visible = false;
 				// credTextShit.visible = false;
 
 				// credTextShit.text = 'Shoutouts Tom Fulp';
@@ -543,7 +539,7 @@ class TitleState extends MusicBeatState
 				var easteregg:String = FlxG.save.data.psychDevsEasterEgg;
 				if (easteregg == null) easteregg = '';
 				easteregg = easteregg.toUpperCase();
-
+				
 				var sound:FlxSound = null;
 				switch(easteregg)
 				{
@@ -594,6 +590,20 @@ class TitleState extends MusicBeatState
 			}
 			else //Default! Edit this one!!
 			{
+				FlxTween.tween(logoBl,{y: 0}, 1.4, {ease: FlxEase.expoInOut});
+
+				logoBl.angle = -4;
+	
+				new FlxTimer().start(0.01, function(tmr:FlxTimer)
+					{
+						if(logoBl.angle == -4) 
+							FlxTween.angle(logoBl, logoBl.angle, 4, 4, {ease: FlxEase.quartInOut});
+						if (logoBl.angle == 4) 
+							FlxTween.angle(logoBl, logoBl.angle, -4, 4, {ease: FlxEase.quartInOut});
+					}, 0);
+	
+				FlxG.sound.music.time = 9400; // 9.4 seconds
+
 				remove(ngSpr);
 				remove(credGroup);
 				FlxG.camera.flash(FlxColor.WHITE, 4);
